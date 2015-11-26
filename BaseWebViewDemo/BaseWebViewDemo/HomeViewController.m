@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     CGRect screenBounds=[UIScreen mainScreen].bounds;
-    webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 70, screenBounds.size.width, screenBounds.size.height-70)];
+    webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, screenBounds.size.width, screenBounds.size.height-64)];
     //    [webView initWithFrame:CGRectMake(0, 70, screenBounds.size.width, screenBounds.size.height-70)];
     [self.view addSubview:webView];
     webView.translatesAutoresizingMaskIntoConstraints = NO;

@@ -22,6 +22,8 @@
 		E78917971BFDB4AC00A2669F /* TestWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E78917951BFDB4AC00A2669F /* TestWebViewController.xib */; };
 		E7EF54AE1BB38C1D00E8B6C1 /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7EF54AC1BB38C1D00E8B6C1 /* IndexViewController.m */; };
 		E7EF54AF1BB38C1D00E8B6C1 /* IndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7EF54AD1BB38C1D00E8B6C1 /* IndexViewController.xib */; };
+		E7FA87271C05AE8A00F3D74D /* TestXibAddBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FA87251C05AE8A00F3D74D /* TestXibAddBaseWebViewController.m */; };
+		E7FA87281C05AE8A00F3D74D /* TestXibAddBaseWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7FA87261C05AE8A00F3D74D /* TestXibAddBaseWebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,9 @@
 		E7EF54AB1BB38C1D00E8B6C1 /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
 		E7EF54AC1BB38C1D00E8B6C1 /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
 		E7EF54AD1BB38C1D00E8B6C1 /* IndexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexViewController.xib; sourceTree = "<group>"; };
+		E7FA87241C05AE8A00F3D74D /* TestXibAddBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestXibAddBaseWebViewController.h; sourceTree = "<group>"; };
+		E7FA87251C05AE8A00F3D74D /* TestXibAddBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestXibAddBaseWebViewController.m; sourceTree = "<group>"; };
+		E7FA87261C05AE8A00F3D74D /* TestXibAddBaseWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestXibAddBaseWebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,9 @@
 				E78917931BFDB4AC00A2669F /* TestWebViewController.h */,
 				E78917941BFDB4AC00A2669F /* TestWebViewController.m */,
 				E78917951BFDB4AC00A2669F /* TestWebViewController.xib */,
+				E7FA87241C05AE8A00F3D74D /* TestXibAddBaseWebViewController.h */,
+				E7FA87251C05AE8A00F3D74D /* TestXibAddBaseWebViewController.m */,
+				E7FA87261C05AE8A00F3D74D /* TestXibAddBaseWebViewController.xib */,
 				E746BCAB1BB008B8009D4498 /* Images.xcassets */,
 				E746BCAD1BB008B8009D4498 /* LaunchScreen.xib */,
 				E746BC9E1BB008B8009D4498 /* Supporting Files */,
@@ -255,6 +263,7 @@
 				E746BCAC1BB008B8009D4498 /* Images.xcassets in Resources */,
 				E78917971BFDB4AC00A2669F /* TestWebViewController.xib in Resources */,
 				E746BCE51BB01AD1009D4498 /* HomeViewController.xib in Resources */,
+				E7FA87281C05AE8A00F3D74D /* TestXibAddBaseWebViewController.xib in Resources */,
 				E7EF54AF1BB38C1D00E8B6C1 /* IndexViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E746BCD31BB00BC1009D4498 /* NJKWebViewProgress.m in Sources */,
+				E7FA87271C05AE8A00F3D74D /* TestXibAddBaseWebViewController.m in Sources */,
 				E7EF54AE1BB38C1D00E8B6C1 /* IndexViewController.m in Sources */,
 				E746BCD41BB00BC1009D4498 /* NJKWebViewProgressView.m in Sources */,
 				E746BCA41BB008B8009D4498 /* AppDelegate.m in Sources */,

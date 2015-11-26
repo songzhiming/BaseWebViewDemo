@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    webView = [[BaseWebView alloc]initWithFrame:CGRectMake(0, 70, kScreenWidth, kScreenHeight - 70)];
+    webView = [[BaseWebView alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64)];
     [webView loadRequestWithUrl:@"https://www.baidu.com/"];
     [self.view addSubview:webView];
     UIBarButtonItem *backBtn = [[UIBarButtonItem alloc]initWithTitle:@"back" style:UIBarButtonItemStylePlain target:self action:@selector(comeback)];

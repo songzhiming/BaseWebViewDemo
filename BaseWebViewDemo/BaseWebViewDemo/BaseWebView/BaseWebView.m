@@ -8,6 +8,7 @@
 
 #import "BaseWebView.h"
 #define IOS7 ([UIDevice currentDevice].systemVersion.doubleValue < 8.0)
+static CGFloat const kProgressViewHeight = 2.0f;
 @implementation BaseWebView
 
 - (id)init
@@ -31,29 +32,40 @@
     }
     return self;
 }
-
+- (void)awakeFromNib{
+}
 
 - (void)setUpView
 {
-    progressBar = [[UIProgressView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, 2)];
-    [self addSubview:progressBar];
     if (IOS7) {//ios7
-        uiwebView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 2, self.frame.size.width, self.frame.size.height - 2)];
+        uiwebView = [[UIWebView alloc]init];
         self.njkWebViewProgress = [[NJKWebViewProgress alloc] init];
         uiwebView.delegate = self.njkWebViewProgress;
         self.njkWebViewProgress.webViewProxyDelegate = self;
         self.njkWebViewProgress.progressDelegate = self;
         [self addSubview:uiwebView];
     }else{//
-        wkwebView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 2, self.frame.size.width, self.frame.size.height - 2)];
+        wkwebView = [[WKWebView alloc]init];
         wkwebView.allowsBackForwardNavigationGestures = YES;
 
         [self addSubview:wkwebView];
         wkwebView.navigationDelegate = self;
         [wkwebView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:NULL];
     }
+    progressBar = [[UIProgressView alloc]init];
+    [self addSubview:progressBar];
 }
 
+
+- (void)layoutSubviews{
+    NSLog(@"======%@",self);
+    progressBar.frame = CGRectMake(0, 0, self.frame.size.width, kProgressViewHeight);
+    if (IOS7) {//ios7
+        uiwebView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height );
+    }else{//
+        wkwebView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height );
+    }
+}
 
 
 - (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context

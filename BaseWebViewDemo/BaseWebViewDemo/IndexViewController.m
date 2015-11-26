@@ -9,6 +9,7 @@
 #import "IndexViewController.h"
 #import "HomeViewController.h"
 #import "TestWebViewController.h"
+#import "TestXibAddBaseWebViewController.h"
 @interface IndexViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -32,7 +33,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 2;
+    return 3;
     
 }
 
@@ -70,8 +71,11 @@
     if (indexPath.row == 0) {
         TestWebViewController *vc = [[TestWebViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
-    }else{
+    }else if(indexPath.row == 1){
         HomeViewController *vc = [[HomeViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        TestXibAddBaseWebViewController *vc = [[TestXibAddBaseWebViewController alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
